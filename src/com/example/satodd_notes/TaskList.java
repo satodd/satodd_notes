@@ -1,5 +1,7 @@
 package com.example.satodd_notes;
 
+//This object creates an array Tasklists containing the object(s) Tasks. Operations performed on the array list are found here
+
 import java.util.ArrayList;
 import java.util.List;
 

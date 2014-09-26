@@ -1,3 +1,9 @@
+//Sarah Todd
+//ccid: satodd
+//App: satodd_notes
+
+//The Archived Activity. Shows the list of archived objects and gives options to move/change their states.
+
 package com.example.satodd_notes;
 
 import android.app.Activity;
@@ -86,7 +92,7 @@ public class Archived_Activity extends Activity {
 				onGoing();
 			}
 		});
-		
+		// lists for long clicking an item in the list view and highlights it
 		arch_view.setOnItemLongClickListener(new OnItemLongClickListener(){
 			public boolean onItemLongClick(AdapterView<?> parent, View view,
 					int position, long id) {
@@ -96,15 +102,11 @@ public class Archived_Activity extends Activity {
 					List.get(position).select();
 					arch_view.getChildAt(position).setBackgroundColor(Color.rgb(157, 222, 149));
 					// in red value R = 222, G = 149, B = 149
-					System.out.print("hold");
 				}
 				else {
 					arch_view.getChildAt(position).setBackgroundColor(Color.WHITE);
 					List.get(position).deselect();
 				}
-				
-				System.out.print("hold");
-				//onGoing();
 				return false;
 			}
 			
@@ -163,13 +165,12 @@ public class Archived_Activity extends Activity {
 				else {
 					arch_view.setItemChecked(x, false);
 				}
-				System.out.print("hold");
 				x++;
 			}//end of while loop
 		 saveInFile(task);
 	}
 	
-	//Code acquired from lonelytwitter ADD CITING HERE
+	//Code referenced from lonelytwitter https://github.com/joshua2ua/lonelyTwitter 09/16/2014
 
 	protected void onStart() {
 		super.onStart();
@@ -187,7 +188,6 @@ public class Archived_Activity extends Activity {
 				else {
 					arch_view.setItemChecked(x, false);
 				}
-				System.out.print("hold");
 				x++;
 		 }//end of while loop
 	}
@@ -262,8 +262,11 @@ public class Archived_Activity extends Activity {
 					if (List.get(y).selected == true){
 						array[y] = "0" + array[y];
 					}
+					else {
+						array[y] = "1" + array[y];
+					}
 					fos.write(new String(array[y]).getBytes());}
-				y++;
+					y++;
 			} //end of while loop
 			fos.close();
 		} catch (FileNotFoundException e) {
@@ -327,6 +330,7 @@ public class Archived_Activity extends Activity {
 	}
 	
 	private AlertDialog getAlert(){
+		
 		String []emailTypes = {"Email Selected"};
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(Archived_Activity.this);
@@ -363,7 +367,7 @@ public class Archived_Activity extends Activity {
 		}
 	
 
-	//Code/guide for emailing in android apps found here: http://stackoverflow.com/questions/2197741/how-can-i-send-emails-from-my-android-application 09/22/2014
+	//Code/guide for emailing in android apps found here:shish Pathak and madlymad,  http://stackoverflow.com/questions/2197741/how-can-i-send-emails-from-my-android-application 09/22/2014
 	private void sending(String[] message){
 			Intent tosend = new Intent(Intent.ACTION_SEND);
 			tosend.putExtra(Intent.EXTRA_SUBJECT, "To Do's");
@@ -371,7 +375,7 @@ public class Archived_Activity extends Activity {
 			try {
 			    startActivity(Intent.createChooser(tosend, "Send mail..."));
 			} catch (android.content.ActivityNotFoundException ex) {
-			    Toast.makeText(Archived_Activity.this, "There are no email clients installed.", Toast.LENGTH_LONG).show();
+			    makeAToast("There are no email clients installed.");
 			}
 		}
 	

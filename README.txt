@@ -52,3 +52,11 @@ Archived items --> In the activity, the user has the following choices:
       -Total number of unchecked archived items
 
 -User may email selected archived items
+-User may unarchive selected items
+
+
+
+____________________________________________________________________
+References were used for the UI/Android development of the application, (specifically buttons, dialog and Toast) mostly found 
+in the android developer resources found at http://developer.android.com/index.html
+Emailing code was take by the stackoverflow topic by Ashish Pathak and madlymad found at http://stackoverflow.com/questions/4711625/sending-email-from-android-app

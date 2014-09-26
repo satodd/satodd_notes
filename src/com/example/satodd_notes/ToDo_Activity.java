@@ -1,10 +1,10 @@
 package com.example.satodd_notes;
+//Sarah Todd
+//ccid: satodd
+//App: satodd_notes
 
-//import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,7 +17,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-//import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -62,9 +61,7 @@ public class ToDo_Activity extends Activity {
 			public void onClick(View v) {
 				//add to task list
 				String text = todo_view.getText().toString();
-				//saveInFile(text + "\n");
 				List.add_new(text, List.length());
-				//saveInFile(List.List_To_Array());
 				makeAToast("Added!");
 				onGoing();
 			}
@@ -95,9 +92,7 @@ public class ToDo_Activity extends Activity {
 					if (List.get(x).selected == true){
 						String[] array = List.List_To_Array();
 						writeOutofFile(array);
-						
 						makeAToast("Archived!");
-						
 						List.delete();
 						onGoing();
 					}
@@ -164,7 +159,6 @@ public class ToDo_Activity extends Activity {
 				}
 				
 				System.out.print("hold");
-				//onGoing();
 				return false;
 			}
 			
@@ -204,14 +198,14 @@ public class ToDo_Activity extends Activity {
 			else {
 				list_view.setItemChecked(x, false);
 			}
-			System.out.print("hold");
 			x++;
 		}//end of while loop
 	 saveInFile(task);
 }
 
-	//Base code acquired from lonelytwitter: https://github.com/joshua2ua/lonelyTwitter. 09/16/2014
+	//Base code referenced from lonelytwitter: https://github.com/joshua2ua/lonelyTwitter. 09/16/2014
 
+	//Loads on start of the activity. Saves states of checked items
 	protected void onStart() {
 	super.onStart();
 	loadFromFile();
@@ -228,11 +222,10 @@ public class ToDo_Activity extends Activity {
 			else {
 				list_view.setItemChecked(x, false);
 			}
-			System.out.print("hold");
 			x++;
 	 }//end of while loop
 }
-
+	//Loads todos from file
 	private void loadFromFile() {
 	ArrayList<String> todo = new ArrayList<String>();
 		try {
@@ -247,7 +240,6 @@ public class ToDo_Activity extends Activity {
 						todo.add(lineText);
 						List.add_new(lineText, index);
 						todoTotal++;
-						//char test = line.charAt(0);
 						if (line.charAt(0) == '1') {
 							List.get(index).complete = true;
 							list_view.setItemChecked(index, true);
@@ -264,7 +256,7 @@ public class ToDo_Activity extends Activity {
 			}
 		onGoing();
 }
-
+	//Saves todo in file
 	private void saveInFile(String[] array) {
 	try {
 		int y = 0;
@@ -284,9 +276,8 @@ public class ToDo_Activity extends Activity {
 					todoChecked++;
 				}
 				fos.write(new String(output[y]).getBytes());}
-			y++;
-		} //end of while
-		
+				y++;
+			} //end of while
 		fos.close();
 	} catch (FileNotFoundException e) {
 		e.printStackTrace();
@@ -294,7 +285,7 @@ public class ToDo_Activity extends Activity {
 		e.printStackTrace();
 	}
 }
-
+	//Writes to archived file to save selected todo items
 	private void writeOutofFile(String[] array){
 	try {
 		int y = 0;
@@ -304,8 +295,11 @@ public class ToDo_Activity extends Activity {
 				if (List.get(y).selected == true){
 					array[y] = "0" + array[y];
 				}
+				else {
+					array[y] = "1" + array[y];
+				}
 				fos.write(new String(array[y]).getBytes());}
-			y++;
+				y++;
 		} //end of while loop
 		fos.close();
 	} catch (FileNotFoundException e) {
@@ -314,7 +308,7 @@ public class ToDo_Activity extends Activity {
 		e.printStackTrace();
 	}
 }
-
+	//counts archived items from file and their checked status
 	private void countFromFile(){
 		try {
 			archivedTotal = 0;
@@ -375,7 +369,7 @@ public class ToDo_Activity extends Activity {
 		
 	}
 	
-	//Code/guide for emailing in android apps found here: http://stackoverflow.com/questions/2197741/how-can-i-send-emails-from-my-android-application 09/22/2014
+	//Code/guide for emailing in android apps found here:shish Pathak and madlymad,  http://stackoverflow.com/questions/2197741/how-can-i-send-emails-from-my-android-application 09/22/2014
 	private void sending(String[] message){
 		Intent tosend = new Intent(Intent.ACTION_SEND);
 		tosend.putExtra(Intent.EXTRA_SUBJECT, "To Do's");
@@ -383,7 +377,7 @@ public class ToDo_Activity extends Activity {
 		try {
 		    startActivity(Intent.createChooser(tosend, "Send mail..."));
 		} catch (android.content.ActivityNotFoundException ex) {
-		    Toast.makeText(ToDo_Activity.this, "There are no email clients installed.", Toast.LENGTH_LONG).show();
+			makeAToast("There are no email clients installed.");
 		}
 	}
 	
