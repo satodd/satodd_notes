@@ -1,8 +1,8 @@
 //Sarah Todd
 //ccid: satodd
 //App: satodd_notes
-
-//The Archived Activity. Shows the list of archived objects and gives options to move/change their states.
+//The Archived Activity. Shows the list of archived objects and gives options to move/change their states. This activity is closely related to the ToDo_activity with some functional changes.
+//How to do UI elements referenced here: http://developer.android.com/index.html 09-16-2014
 
 package com.example.satodd_notes;
 
@@ -44,7 +44,7 @@ public class Archived_Activity extends Activity {
 	TaskList Selected = new TaskList();
 	TaskList Archived = new TaskList();
 	
-	
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_archived_);
@@ -148,7 +148,7 @@ public class Archived_Activity extends Activity {
 		
 	}
 
-	//dynamically changes listview. 
+	//dynamically changes listview and checks completed status
 	private void onGoing(){
 
 		String[] task = List.List_To_Array();
@@ -170,8 +170,7 @@ public class Archived_Activity extends Activity {
 		 saveInFile(task);
 	}
 	
-	//Code referenced from lonelytwitter https://github.com/joshua2ua/lonelyTwitter 09/16/2014
-
+	//Code referenced from joshua2ua: lonelytwitter https://github.com/joshua2ua/lonelyTwitter 09/16/2014
 	protected void onStart() {
 		super.onStart();
 		loadFromFile();
@@ -191,7 +190,7 @@ public class Archived_Activity extends Activity {
 				x++;
 		 }//end of while loop
 	}
-	
+	//loads archived from text file
 	private void loadFromFile() {
 		ArrayList<String> todo = new ArrayList<String>();
 		try {
@@ -222,7 +221,7 @@ public class Archived_Activity extends Activity {
 			}
 		onGoing();
 	}
-
+	//save archives to file
 	private void saveInFile(String[] array) {
 		try {
 			int y = 0;
@@ -252,7 +251,7 @@ public class Archived_Activity extends Activity {
 			e.printStackTrace();
 		}
 	}
-
+	//writes when unarchived is pressed to the todo file with appropriate serial number (0/1)
 	private void writeOutofFile(String[] array){
 		try {
 			int y = 0;
@@ -275,7 +274,7 @@ public class Archived_Activity extends Activity {
 			e.printStackTrace();
 		}
 	}
-	
+	//counts todo items and if they are selected or not
 	private void countFromFile(){
 		try {
 			todoTotal = 0;
@@ -329,6 +328,7 @@ public class Archived_Activity extends Activity {
 		toast.show();
 	}
 	
+	//Brings up the dialog of email selection
 	private AlertDialog getAlert(){
 		
 		String []emailTypes = {"Email Selected"};

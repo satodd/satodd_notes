@@ -1,5 +1,11 @@
 package com.example.satodd_notes;
 
+//Sarah Todd
+//ccid: satodd
+//App: satodd_notes
+
+//Object that stores information regarding todos: their text, completion status and selected status. Also includes functions to fetch and set data. This is the base class for the app
+
 public class Tasks {
 
 	public String todo;

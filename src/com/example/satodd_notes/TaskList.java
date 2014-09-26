@@ -1,6 +1,10 @@
 package com.example.satodd_notes;
 
-//This object creates an array Tasklists containing the object(s) Tasks. Operations performed on the array list are found here
+//Sarah Todd
+//ccid: satodd
+//App: satodd_notes
+//This object creates an array Tasklists containing the object(s) Tasks, allowing for easy access to the items in the list and the ability to manipulatre the list itself.
+//Operations performed on the array list are found here including size, changing to just text array, deletion and getting information.
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +68,7 @@ public class TaskList{
 	}
 	
 	public Tasks get(int index){
+		//gets task from list at index
 		Tasks task = Task_List.get(index);
 		return task;
 	}
@@ -100,9 +105,6 @@ public class TaskList{
 
 	public void clear(){
 		Task_List.clear();
-	}
-	public void email(){
-		//email checked todo's
 	}
 
 

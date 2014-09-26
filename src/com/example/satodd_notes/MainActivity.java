@@ -1,5 +1,11 @@
 package com.example.satodd_notes;
 
+//Sarah Todd
+//ccid: satodd
+//App: satodd_notes
+//A Todo app where you can add, delete, save, email items as well as view saved/archived items. For more information, including for how to use and licencing see the README file included.
+//How to do UI elements referenced here: http://developer.android.com/index.html 09-16-2014
+
 import com.example.satodd_notes.Archived_Activity;
 import com.example.satodd_notes.ToDo_Activity;
 import android.app.Activity;
@@ -14,26 +20,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 	}
-//
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//		// Inflate the menu; this adds items to the action bar if it is present.
-//		getMenuInflater().inflate(R.menu.main, menu);
-//		return true;
-//	}
-//
-//	@Override
-//	public boolean onOptionsItemSelected(MenuItem item) {
-//		// Handle action bar item clicks here. The action bar will
-//		// automatically handle clicks on the Home/Up button, so long
-//		// as you specify a parent activity in AndroidManifest.xml.
-//		int id = item.getItemId();
-//		if (id == R.id.action_settings) {
-//			return true;
-//		}
-//		return super.onOptionsItemSelected(item);
-//	}
-//	
 	//starts to do activity
 	public void toDo_main(View view) {
 		Intent intent = new Intent(this, ToDo_Activity.class);

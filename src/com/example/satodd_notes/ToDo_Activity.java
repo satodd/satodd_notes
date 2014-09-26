@@ -2,6 +2,8 @@ package com.example.satodd_notes;
 //Sarah Todd
 //ccid: satodd
 //App: satodd_notes
+//The active todo activity. User may add new tasks, select/delete by long clicking and the appropriate button, email with options and archive Tasks and see Statistics of todos in the app.
+//How to do UI elements referenced here: http://developer.android.com/index.html 09-16-2014
 
 import android.app.Activity;
 import android.os.Bundle;
