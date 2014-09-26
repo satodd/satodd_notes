@@ -13,29 +13,46 @@ Upon entering the application, named satodd_notes, the user can choose either to
 of the achived items. 
 
 Todo items --> In the activity, the user has the following choices:
-        -User may check off completed todos by short clicking on the text boxes.
-        -User may add a new todo item by entering text in the textbox located at the top of the screen. The + button will add
-        the text into the listview below.
-        -User may archive selected items. To select items, user must long click on an item, were it will then turn green,
-          indicating the selection. This item is then added to the archived list.
-        -User may delete selected items.
-        -User may see the statistics of the app and it's contents in a dialog box. This includes:
-                  -
-                  -
-                  -
-                  -
-                  -
-        -User may email items. Options appear in a dialog box. User may make a selection or click away from the box in order to
-          cancel.
+
+-User may check off completed todos by short clicking on the text boxes.
+-User may add a new todo item by entering text in the textbox located at the top of the screen. The + button will add
+the text into the listview below.
+-User may archive selected items. To select items, user must long click on an item, were it will then turn green,
+  indicating the selection. This item is then added to the archived list.
+-User may delete selected items.
+-User may see the statistics of the app and it's contents in a dialog box. This includes:
+
+          -
+          
+          -
+          
+          -
+          
+          -
+          
+          -
+          
+-User may email items. Options appear in a dialog box. User may make a selection or click away from the box in order to
+  cancel.
+ 
+ 
+ 
 Archived items --> In the activity, the user has the following choices:
-        -User may check off items by short clicking on the text boxes
-        -User may see the statistics of the app and it's contents in a dialog box. This includes:
-                  -
-                  -
-                  -
-                  -
-                  -
-        -User may email selected archived items
+
+-User may check off items by short clicking on the text boxes
+-User may see the statistics of the app and it's contents in a dialog box. This includes:
+          -
+          
+          -
+          
+          -
+          
+          -
+          
+          -
+          
+-User may email selected archived items
+
         
         
         
