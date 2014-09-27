@@ -9,6 +9,9 @@ package com.example.satodd_notes;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @uml.dependency   supplier="com.example.satodd_notes.Tasks"
+ */
 public class TaskList{
 
 	public List<Tasks> Task_List = new ArrayList<Tasks>();

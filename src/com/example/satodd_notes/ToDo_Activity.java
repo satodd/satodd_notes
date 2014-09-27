@@ -1,12 +1,11 @@
 package com.example.satodd_notes;
+
 //Sarah Todd
 //ccid: satodd
 //App: satodd_notes
 //The active todo activity. User may add new tasks, select/delete by long clicking and the appropriate button, email with options and archive Tasks and see Statistics of todos in the app.
 //How to do UI elements referenced here: http://developer.android.com/index.html 09-16-2014
 
-import android.app.Activity;
-import android.os.Bundle;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,11 +13,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -28,7 +30,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+import java.util.Collection;
 
+/**
+ * @author    satodd
+ * @uml.dependency   supplier="com.example.satodd_notes.MainActivity"
+ */
 public class ToDo_Activity extends Activity {
 	
 	private static final String FILENAME = "todo.txt";
@@ -38,9 +45,21 @@ public class ToDo_Activity extends Activity {
 	private int todoChecked;
 	private int archivedTotal;
 	private int archivedChecked;
-	
+	int flag = 0;
+	/**
+	 * @uml.property  name="list"
+	 * @uml.associationEnd  
+	 */
 	TaskList List = new TaskList();	
+	/**
+	 * @uml.property  name="selected"
+	 * @uml.associationEnd  
+	 */
 	TaskList Selected = new TaskList();
+	/**
+	 * @uml.property  name="archived"
+	 * @uml.associationEnd  
+	 */
 	TaskList Archived = new TaskList();
 	
 	@Override
@@ -74,14 +93,21 @@ public class ToDo_Activity extends Activity {
 			public void onClick(View v) {
 				//delete task list
 				int x = 0;
+				flag = 0;
 				while (x < List.length()){
 					if (List.get(x).selected == true){
 						List.delete();
+						flag = 1;
 					}
 					x++;
 				}
-				makeAToast("Deleted!");
-				onGoing();
+				if (flag == 1){
+					makeAToast("Deleted!");
+					onGoing();
+				}
+				else{
+					makeAToast("No items selected");
+				}
 			}
 			});
 		
@@ -90,16 +116,23 @@ public class ToDo_Activity extends Activity {
 			public void onClick(View v) {
 				//add to task list
 				int x = 0;
+				flag = 0;
 				while (x < List.length()){
 					if (List.get(x).selected == true){
 						String[] array = List.List_To_Array();
 						writeOutofFile(array);
-						makeAToast("Archived!");
+						flag = 1;
 						List.delete();
 						onGoing();
 					}
 					x++;
-				}	
+				}//end of while loop
+				if (flag == 1){
+					makeAToast("Archived!");
+				}
+				else{
+					makeAToast("No items selected");
+				}
 			}
 			});
 		
@@ -176,8 +209,8 @@ public class ToDo_Activity extends Activity {
 		AlertDialog.Builder builder = new AlertDialog.Builder(ToDo_Activity.this);
 		builder.setTitle("What would you like to email?");
 		builder.setItems(emailTypes, new DialogInterface.OnClickListener() {
-               public void onClick(DialogInterface dialog, int which) {
-               	   email(which);
+             public void onClick(DialogInterface dialog, int which) {
+             	   email(which);
 	}
 		});
 		AlertDialog question = builder.create();
@@ -187,7 +220,7 @@ public class ToDo_Activity extends Activity {
 	private void onGoing(){
 	
 	 String[] task = List.List_To_Array();
-	 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.abc_list_menu_item_checkbox, task);
+	 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, task);
 	 list_view.setAdapter(adapter);
 	 int x = 0;
 	 saveInFile(task);
@@ -212,7 +245,7 @@ public class ToDo_Activity extends Activity {
 	super.onStart();
 	loadFromFile();
 	String[] todo = List.List_To_Array();
-	ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.abc_list_menu_item_checkbox, todo);
+	ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, todo);
 	list_view.setAdapter(adapter);
 	int x = 0;
 	 
@@ -296,12 +329,9 @@ public class ToDo_Activity extends Activity {
 			if (array[y] != null){
 				if (List.get(y).selected == true){
 					array[y] = "0" + array[y];
-				}
-				else {
-					array[y] = "1" + array[y];
-				}
 				fos.write(new String(array[y]).getBytes());}
-				y++;
+			}
+			y++;
 		} //end of while loop
 		fos.close();
 	} catch (FileNotFoundException e) {
@@ -406,6 +436,54 @@ public class ToDo_Activity extends Activity {
 		Toast toast = Toast.makeText(context, text, duration);
 		toast.show();
 	}
-}
-	
 
+	/**
+	 * @uml.property  name="mainActivity"
+	 * @uml.associationEnd  inverse="toDo_Activity:com.example.satodd_notes.MainActivity"
+	 */
+	private MainActivity mainActivity;
+
+	/**
+	 * Getter of the property <tt>mainActivity</tt>
+	 * @return  Returns the mainActivity.
+	 * @uml.property  name="mainActivity"
+	 */
+	public MainActivity getMainActivity() {
+		return mainActivity;
+	}
+
+
+	/**
+	 * Setter of the property <tt>mainActivity</tt>
+	 * @param mainActivity  The mainActivity to set.
+	 * @uml.property  name="mainActivity"
+	 */
+	public void setMainActivity(MainActivity mainActivity) {
+		this.mainActivity = mainActivity;
+	}
+
+	/**
+	 * @uml.property  name="mainActivity1"
+	 * @uml.associationEnd  multiplicity="(1 -1)" inverse="toDo_Activity2:com.example.satodd_notes.MainActivity"
+	 */
+	private Collection<MainActivity> mainActivity1;
+
+	/**
+	 * Getter of the property <tt>mainActivity1</tt>
+	 * @return  Returns the mainActivity1.
+	 * @uml.property  name="mainActivity1"
+	 */
+	public Collection<MainActivity> getMainActivity1() {
+		return mainActivity1;
+	}
+
+
+	/**
+	 * Setter of the property <tt>mainActivity1</tt>
+	 * @param mainActivity1  The mainActivity1 to set.
+	 * @uml.property  name="mainActivity1"
+	 */
+	public void setMainActivity1(Collection<MainActivity> mainActivity1) {
+		this.mainActivity1 = mainActivity1;
+	}
+}

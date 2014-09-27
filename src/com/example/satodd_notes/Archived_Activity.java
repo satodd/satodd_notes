@@ -6,8 +6,6 @@
 
 package com.example.satodd_notes;
 
-import android.app.Activity;
-import android.os.Bundle;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,11 +13,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -28,8 +29,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+import java.util.Collection;
 
+/**
+ * @author  satodd
+ */
 public class Archived_Activity extends Activity {
+
 
 	
 	private static final String OUTFILE = "todo.txt";
@@ -39,9 +45,21 @@ public class Archived_Activity extends Activity {
 	private int todoChecked;
 	private int archivedTotal;
 	private int archivedChecked;
-	
+	private int flag = 0;
+	/**
+	 * @uml.property  name="list"
+	 * @uml.associationEnd  
+	 */
 	TaskList List = new TaskList();	
+	/**
+	 * @uml.property  name="selected"
+	 * @uml.associationEnd  
+	 */
 	TaskList Selected = new TaskList();
+	/**
+	 * @uml.property  name="archived"
+	 * @uml.associationEnd  
+	 */
 	TaskList Archived = new TaskList();
 	
 
@@ -55,7 +73,6 @@ public class Archived_Activity extends Activity {
 		Button eButton = (Button) findViewById(R.id.email_Button);
 		Button sButton = (Button) findViewById(R.id.stats_Button);
 		arch_view = (ListView) findViewById(R.id.archlist);
-		//oldList.setAdapter(list_adapter);
 		
 
 	//Click Done button, appends string to todo file
@@ -63,15 +80,23 @@ public class Archived_Activity extends Activity {
 			public void onClick(View v) {
 				//add to task list
 				int x = 0;
+				int flag = 0;
 				while (x < List.length()){
 					if (List.get(x).selected == true){
 						String array[] = List.List_To_Array();
 						writeOutofFile(array);
 						makeAToast("Unarchived!");
+						flag = 1;
 					}
 					x++;
 				}
-				List.delete();
+				if (List.length() > 0){
+					List.delete();
+					makeAToast("No items in the list!");
+				}
+				if (flag == 0){
+					makeAToast("No items selected");
+				}
 				onGoing();
 			}
 			});
@@ -135,9 +160,11 @@ public class Archived_Activity extends Activity {
 			public void onClick(View v) {
 				//delete task list
 				int x = 0;
+				flag = 0;
 				while (x < List.length()){
 					if (List.get(x).selected == true){
 						List.delete();
+						flag = 1;
 					}
 					x++;
 				}
@@ -145,6 +172,9 @@ public class Archived_Activity extends Activity {
 				onGoing();
 			}
 			});
+		if (flag == 0){
+			makeAToast("No items selected");
+		}
 		
 	}
 
@@ -152,7 +182,7 @@ public class Archived_Activity extends Activity {
 	private void onGoing(){
 
 		String[] task = List.List_To_Array();
-		 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.abc_list_menu_item_checkbox, task);
+		 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, task);
 		 arch_view.setAdapter(adapter);
 		 int x = 0;
 		 saveInFile(task);
@@ -175,7 +205,7 @@ public class Archived_Activity extends Activity {
 		super.onStart();
 		loadFromFile();
 		String[] todo = List.List_To_Array();
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.abc_list_menu_item_checkbox, todo);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, todo);
 		arch_view.setAdapter(adapter);
 		int x = 0;
 		 
@@ -260,12 +290,9 @@ public class Archived_Activity extends Activity {
 				if (array[y] != null){
 					if (List.get(y).selected == true){
 						array[y] = "0" + array[y];
-					}
-					else {
-						array[y] = "1" + array[y];
-					}
 					fos.write(new String(array[y]).getBytes());}
-					y++;
+				}
+				y++;
 			} //end of while loop
 			fos.close();
 		} catch (FileNotFoundException e) {
@@ -378,8 +405,32 @@ public class Archived_Activity extends Activity {
 			    makeAToast("There are no email clients installed.");
 			}
 		}
+
+
+	/** 
+	 * @uml.property name="mainActivity"
+	 * @uml.associationEnd multiplicity="(1 -1)" inverse="archived_Activity:com.example.satodd_notes.MainActivity"
+	 */
+	private Collection<MainActivity> mainActivity;
+
+
+	/** 
+	 * Getter of the property <tt>mainActivity</tt>
+	 * @return  Returns the mainActivity.
+	 * @uml.property  name="mainActivity"
+	 */
+	public Collection<MainActivity> getMainActivity() {
+		return mainActivity;
+	}
+
+	/** 
+	 * Setter of the property <tt>mainActivity</tt>
+	 * @param mainActivity  The mainActivity to set.
+	 * @uml.property  name="mainActivity"
+	 */
+	public void setMainActivity(Collection<MainActivity> mainActivity) {
+		this.mainActivity = mainActivity;
+	}
 	
 	
 	}
-
-
