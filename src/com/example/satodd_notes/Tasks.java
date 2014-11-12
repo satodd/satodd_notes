@@ -1,5 +1,7 @@
 package com.example.satodd_notes;
 
+import java.util.Collection;
+
 //Sarah Todd
 //ccid: satodd
 //App: satodd_notes
@@ -43,6 +45,54 @@ public class Tasks {
 	 */
 	public String getTodo(){
 		return todo;
+	}
+
+	/** 
+	 * @uml.property name="taskList"
+	 * @uml.associationEnd inverse="tasks:com.example.satodd_notes.TaskList"
+	 */
+	private TaskList taskList;
+
+
+	/** 
+	 * Getter of the property <tt>taskList</tt>
+	 * @return  Returns the taskList.
+	 * @uml.property  name="taskList"
+	 */
+	public TaskList getTaskList() {
+		return taskList;
+	}
+	/** 
+	 * Setter of the property <tt>taskList</tt>
+	 * @param taskList  The taskList to set.
+	 * @uml.property  name="taskList"
+	 */
+	public void setTaskList(TaskList taskList) {
+		this.taskList = taskList;
+	}
+
+	/** 
+	 * @uml.property name="taskList1"
+	 * @uml.associationEnd multiplicity="(0 2)" inverse="tasks:com.example.satodd_notes.TaskList"
+	 */
+	private Collection taskList1;
+
+
+	/** 
+	 * Getter of the property <tt>taskList1</tt>
+	 * @return  Returns the taskList1.
+	 * @uml.property  name="taskList1"
+	 */
+	public Collection getTaskList1() {
+		return taskList1;
+	}
+	/** 
+	 * Setter of the property <tt>taskList1</tt>
+	 * @param taskList1  The taskList1 to set.
+	 * @uml.property  name="taskList1"
+	 */
+	public void setTaskList1(Collection taskList1) {
+		this.taskList1 = taskList1;
 	}
 	
 }

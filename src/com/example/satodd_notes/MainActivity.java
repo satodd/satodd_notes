@@ -88,13 +88,13 @@ public class MainActivity extends Activity {
 		this.toDo_Activity1 = toDo_Activity1;
 	}
 
-	/**
-	 * @uml.property  name="toDo_Activity2"
-	 * @uml.associationEnd  inverse="mainActivity1:com.example.satodd_notes.ToDo_Activity"
+	/** 
+	 * @uml.property name="toDo_Activity2"
+	 * @uml.associationEnd inverse="mainActivity1:com.example.satodd_notes.ToDo_Activity"
 	 */
 	private ToDo_Activity toDo_Activity2;
 
-	/**
+	/** 
 	 * Getter of the property <tt>toDo_Activity2</tt>
 	 * @return  Returns the toDo_Activity2.
 	 * @uml.property  name="toDo_Activity2"
@@ -103,7 +103,7 @@ public class MainActivity extends Activity {
 		return toDo_Activity2;
 	}
 
-	/**
+	/** 
 	 * Setter of the property <tt>toDo_Activity2</tt>
 	 * @param toDo_Activity2  The toDo_Activity2 to set.
 	 * @uml.property  name="toDo_Activity2"

@@ -8,6 +8,7 @@ package com.example.satodd_notes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collection;
 
 /**
  * @uml.dependency   supplier="com.example.satodd_notes.Tasks"
@@ -108,6 +109,31 @@ public class TaskList{
 
 	public void clear(){
 		Task_List.clear();
+	}
+
+
+	/** 
+	 * @uml.property name="tasks"
+	 * @uml.associationEnd aggregation="composite" inverse="taskList1:com.example.satodd_notes.Tasks"
+	 */
+	private Tasks tasks;
+
+	/** 
+	 * Getter of the property <tt>tasks</tt>
+	 * @return  Returns the tasks.
+	 * @uml.property  name="tasks"
+	 */
+	public Tasks getTasks() {
+		return tasks;
+	}
+
+	/** 
+	 * Setter of the property <tt>tasks</tt>
+	 * @param tasks  The tasks to set.
+	 * @uml.property  name="tasks"
+	 */
+	public void setTasks(Tasks tasks) {
+		this.tasks = tasks;
 	}
 
 

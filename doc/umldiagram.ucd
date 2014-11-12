@@ -1,5 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" id="com.example.satodd_notes" metadata="uml2-1.0" tag="1000" key="32303037303533312D31303030207361746F64645F6E6F7465732F7361746F6464">
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="umldiagram" size="923,708" id="com.example.satodd_notes" metadata="uml2-1.0" initialized="true" scrolledY="-11" tag="1000" key="32303037303533312D31303030207361746F64645F6E6F7465732F7361746F6464">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.1 //@children.4/@sourceConnections.0" name="ToDo_Activity" location="45,45" size="142,463" id="com.example.satodd_notes/ToDo_Activity" runTimeClassModel="getAlert(),list_view,archivedChecked,stats(),setMainActivity1(Ljava.util.Collection;),onCreate(Landroid.os.Bundle;),saveInFile([Ljava.lang.String;),oUTFILE,onStart(),loadFromFile(),archivedTotal,email(I),getMainActivity1(),fILENAME,todoChecked,makeAToast(Ljava.lang.String;),todoTotal,sending([Ljava.lang.String;),onGoing(),writeOutofFile([Ljava.lang.String;),setMainActivity(Lcom.example.satodd_notes.MainActivity;),countFromFile(),getMainActivity()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="119,126">
+      <children xsi:type="editmodel:AttributeEditModel" name="archivedChecked" id="com.example.satodd_notes/ToDo_Activity#archivedChecked"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="archivedTotal" id="com.example.satodd_notes/ToDo_Activity#archivedTotal"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fILENAME" id="com.example.satodd_notes/ToDo_Activity#fILENAME"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="list_view" id="com.example.satodd_notes/ToDo_Activity#list_view"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="oUTFILE" id="com.example.satodd_notes/ToDo_Activity#oUTFILE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="todoChecked" id="com.example.satodd_notes/ToDo_Activity#todoChecked"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="todoTotal" id="com.example.satodd_notes/ToDo_Activity#todoTotal"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,288">
+      <children xsi:type="editmodel:MethodEditModel" name="countFromFile" id="com.example.satodd_notes/ToDo_Activity#countFromFile()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="email" id="com.example.satodd_notes/ToDo_Activity#email(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAlert" id="com.example.satodd_notes/ToDo_Activity#getAlert()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMainActivity" id="com.example.satodd_notes/ToDo_Activity#getMainActivity()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMainActivity1" id="com.example.satodd_notes/ToDo_Activity#getMainActivity1()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="loadFromFile" id="com.example.satodd_notes/ToDo_Activity#loadFromFile()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="makeAToast" id="com.example.satodd_notes/ToDo_Activity#makeAToast(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onCreate" id="com.example.satodd_notes/ToDo_Activity#onCreate(Landroid.os.Bundle;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onGoing" id="com.example.satodd_notes/ToDo_Activity#onGoing()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onStart" id="com.example.satodd_notes/ToDo_Activity#onStart()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="writeOutofFile" id="com.example.satodd_notes/ToDo_Activity#writeOutofFile([Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sending" id="com.example.satodd_notes/ToDo_Activity#sending([Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setMainActivity" id="com.example.satodd_notes/ToDo_Activity#setMainActivity(Lcom.example.satodd_notes.MainActivity;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setMainActivity1" id="com.example.satodd_notes/ToDo_Activity#setMainActivity1(Ljava.util.Collection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stats" id="com.example.satodd_notes/ToDo_Activity#stats()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="saveInFile" id="com.example.satodd_notes/ToDo_Activity#saveInFile([Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0 //@children.4/@sourceConnections.1" name="Archived_Activity" location="465,45" size="160,301" id="com.example.satodd_notes/Archived_Activity" runTimeClassModel="getAlert(),stats(),onCreate(Landroid.os.Bundle;),saveInFile([Ljava.lang.String;),setMainActivity(Ljava.util.Collection;),onStart(),loadFromFile(),email(I),makeAToast(Ljava.lang.String;),sending([Ljava.lang.String;),onGoing(),countFromFile(),writeOutofFile([Ljava.lang.String;),getMainActivity()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="104,252">
+      <children xsi:type="editmodel:MethodEditModel" name="countFromFile" id="com.example.satodd_notes/Archived_Activity#countFromFile()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="email" id="com.example.satodd_notes/Archived_Activity#email(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAlert" id="com.example.satodd_notes/Archived_Activity#getAlert()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMainActivity" id="com.example.satodd_notes/Archived_Activity#getMainActivity()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="loadFromFile" id="com.example.satodd_notes/Archived_Activity#loadFromFile()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="makeAToast" id="com.example.satodd_notes/Archived_Activity#makeAToast(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onCreate" id="com.example.satodd_notes/Archived_Activity#onCreate(Landroid.os.Bundle;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onGoing" id="com.example.satodd_notes/Archived_Activity#onGoing()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onStart" id="com.example.satodd_notes/Archived_Activity#onStart()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="saveInFile" id="com.example.satodd_notes/Archived_Activity#saveInFile([Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sending" id="com.example.satodd_notes/Archived_Activity#sending([Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setMainActivity" id="com.example.satodd_notes/Archived_Activity#setMainActivity(Ljava.util.Collection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="stats" id="com.example.satodd_notes/Archived_Activity#stats()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="writeOutofFile" id="com.example.satodd_notes/Archived_Activity#writeOutofFile([Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showProtectedAttributes="true" showPublicAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TaskList" location="255,81" size="148,265" id="com.example.satodd_notes/TaskList" runTimeClassModel="getTasks(),length(),Select(I),delete(),get(I),clear(),isCompleted(I),setTasks(Lcom.example.satodd_notes.Tasks;),task_List,List_To_Array(),remove(I),add_new(Ljava.lang.String;I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="125,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="task_List" id="com.example.satodd_notes/TaskList#task_List"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="92,198">
+      <children xsi:type="editmodel:MethodEditModel" name="List_To_Array" id="com.example.satodd_notes/TaskList#List_To_Array()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Select" id="com.example.satodd_notes/TaskList#Select(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="add_new" id="com.example.satodd_notes/TaskList#add_new(Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="clear" id="com.example.satodd_notes/TaskList#clear()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="delete" id="com.example.satodd_notes/TaskList#delete()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get" id="com.example.satodd_notes/TaskList#get(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTasks" id="com.example.satodd_notes/TaskList#getTasks()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isCompleted" id="com.example.satodd_notes/TaskList#isCompleted(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="length" id="com.example.satodd_notes/TaskList#length()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="remove" id="com.example.satodd_notes/TaskList#remove(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setTasks" id="com.example.satodd_notes/TaskList#setTasks(Lcom.example.satodd_notes.Tasks;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="com.example.satodd_notes/TaskList@archived+com.example.satodd_notes/Archived_Activity@" source="//@children.2" target="//@children.1" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="archived" location="148,132" id="com.example.satodd_notes/TaskList@archived+com.example.satodd_notes/Archived_Activity@|com.example.satodd_notes/TaskList#archived" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.2/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" ~ archived" location="410,194" size="55,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="410,220" size="6,12" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,168" id="com.example.satodd_notes/TaskList@archived+com.example.satodd_notes/Archived_Activity@|com.example.satodd_notes/Archived_Activity#"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="com.example.satodd_notes/TaskList@list+com.example.satodd_notes/ToDo_Activity@" source="//@children.2" target="//@children.0" targetEnd="//@children.2/@sourceConnections.1/@children.2" label="//@children.2/@sourceConnections.1/@children.0" sourceEnd="//@children.2/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="list" location="0,132" id="com.example.satodd_notes/TaskList@list+com.example.satodd_notes/ToDo_Activity@|com.example.satodd_notes/TaskList#list" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.2/@sourceConnections.1/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" ~ list" location="219,194" size="29,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="242,220" size="6,12" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="142,168" id="com.example.satodd_notes/TaskList@list+com.example.satodd_notes/ToDo_Activity@|com.example.satodd_notes/ToDo_Activity#"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="com.example.satodd_notes/Tasks@tasks+com.example.satodd_notes/TaskList@taskList1" source="//@children.2" target="//@children.3" targetEnd="//@children.2/@sourceConnections.2/@children.1" label="//@children.2/@sourceConnections.2/@children.2" sourceEnd="//@children.2/@sourceConnections.2/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="taskList1" location="74,265" id="com.example.satodd_notes/Tasks@tasks+com.example.satodd_notes/TaskList@taskList1|com.example.satodd_notes/TaskList#taskList1" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.2/@children.0/@children.2" roleLabel="//@children.2/@sourceConnections.2/@children.0/@children.0" orderingLabel="//@children.2/@sourceConnections.2/@children.0/@children.1" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - taskList1" location="336,353" size="52,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="{order}" location="284,353" size="38,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..2" location="336,365" size="18,12" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="tasks" location="66,0" id="com.example.satodd_notes/Tasks@tasks+com.example.satodd_notes/TaskList@taskList1|com.example.satodd_notes/Tasks#tasks" multiplicityLabel="//@children.2/@sourceConnections.2/@children.1/@children.1" roleLabel="//@children.2/@sourceConnections.2/@children.1/@children.0" aggregationKind="Composition" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - tasks" location="336,386" size="34,12" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="304,386" size="18,12" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showProtectedAttributes="true" showPublicAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.2" name="Tasks" location="263,405" size="132,283" id="com.example.satodd_notes/Tasks" runTimeClassModel="getTaskList(),select(),setTaskList1(Ljava.util.Collection;),todo,uncomplete(),getTodo(),set_text(Ljava.lang.String;),set_complete(),selected,setTaskList(Lcom.example.satodd_notes.TaskList;),getTaskList1(),complete,deselect()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="109,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="complete" id="com.example.satodd_notes/Tasks#complete"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="selected" id="com.example.satodd_notes/Tasks#selected"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="todo" id="com.example.satodd_notes/Tasks#todo"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,180">
+      <children xsi:type="editmodel:MethodEditModel" name="deselect" id="com.example.satodd_notes/Tasks#deselect()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTaskList" id="com.example.satodd_notes/Tasks#getTaskList()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTaskList1" id="com.example.satodd_notes/Tasks#getTaskList1()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTodo" id="com.example.satodd_notes/Tasks#getTodo()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="select" id="com.example.satodd_notes/Tasks#select()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setTaskList" id="com.example.satodd_notes/Tasks#setTaskList(Lcom.example.satodd_notes.TaskList;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setTaskList1" id="com.example.satodd_notes/Tasks#setTaskList1(Ljava.util.Collection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_complete" id="com.example.satodd_notes/Tasks#set_complete()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_text" id="com.example.satodd_notes/Tasks#set_text(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="uncomplete" id="com.example.satodd_notes/Tasks#uncomplete()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showProtectedAttributes="true" showPublicAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MainActivity" location="265,0" size="127,29" id="com.example.satodd_notes/MainActivity" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" id="com.example.satodd_notes/MainActivity@mainActivity1+com.example.satodd_notes/ToDo_Activity@toDo_Activity2" source="//@children.4" target="//@children.0" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="mainActivity1" location="0,21" id="com.example.satodd_notes/MainActivity@mainActivity1+com.example.satodd_notes/ToDo_Activity@toDo_Activity2|com.example.satodd_notes/MainActivity#mainActivity1" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.4/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - mainActivity1" location="184,2" size="74,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1..*" location="241,28" size="17,12" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="toDo_Activity2" location="142,6" id="com.example.satodd_notes/MainActivity@mainActivity1+com.example.satodd_notes/ToDo_Activity@toDo_Activity2|com.example.satodd_notes/ToDo_Activity#toDo_Activity2" multiplicityLabel="//@children.4/@sourceConnections.0/@children.2/@children.1" roleLabel="//@children.4/@sourceConnections.0/@children.2/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - toDo_Activity2" location="194,58" size="78,12" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="194,32" size="18,12" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" id="com.example.satodd_notes/Archived_Activity@archived_Activity+com.example.satodd_notes/MainActivity@mainActivity" source="//@children.4" target="//@children.1" targetEnd="//@children.4/@sourceConnections.1/@children.2" label="//@children.4/@sourceConnections.1/@children.0" sourceEnd="//@children.4/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="mainActivity" location="127,15" id="com.example.satodd_notes/Archived_Activity@archived_Activity+com.example.satodd_notes/MainActivity@mainActivity|com.example.satodd_notes/MainActivity#mainActivity" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.4/@sourceConnections.1/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - mainActivity" location="399,-4" size="68,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1..*" location="399,22" size="17,12" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="archived_Activity" location="0,10" id="com.example.satodd_notes/Archived_Activity@archived_Activity+com.example.satodd_notes/MainActivity@mainActivity|com.example.satodd_notes/Archived_Activity#archived_Activity" multiplicityLabel="//@children.4/@sourceConnections.1/@children.2/@children.1" roleLabel="//@children.4/@sourceConnections.1/@children.2/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - archived_Activity" location="368,62" size="90,12" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="440,36" size="18,12" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
   <diagramOptions xsi:type="options:ClassDiagramOptions" interactive="false" properties="open=com.example.satodd_notes/TaskList;wireOptions=2;Product=eUML2;displayOptions=1"/>
   <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
     <leftRuler/>

@@ -462,28 +462,28 @@ public class ToDo_Activity extends Activity {
 		this.mainActivity = mainActivity;
 	}
 
-	/**
-	 * @uml.property  name="mainActivity1"
-	 * @uml.associationEnd  multiplicity="(1 -1)" inverse="toDo_Activity2:com.example.satodd_notes.MainActivity"
+	/** 
+	 * @uml.property name="mainActivity1"
+	 * @uml.associationEnd multiplicity="(1 -1)" inverse="toDo_Activity2:com.example.satodd_notes.MainActivity"
 	 */
-	private Collection<MainActivity> mainActivity1;
+	private Collection mainActivity1;
 
-	/**
+	/** 
 	 * Getter of the property <tt>mainActivity1</tt>
 	 * @return  Returns the mainActivity1.
 	 * @uml.property  name="mainActivity1"
 	 */
-	public Collection<MainActivity> getMainActivity1() {
+	public Collection getMainActivity1() {
 		return mainActivity1;
 	}
 
 
-	/**
+	/** 
 	 * Setter of the property <tt>mainActivity1</tt>
 	 * @param mainActivity1  The mainActivity1 to set.
 	 * @uml.property  name="mainActivity1"
 	 */
-	public void setMainActivity1(Collection<MainActivity> mainActivity1) {
+	public void setMainActivity1(Collection mainActivity1) {
 		this.mainActivity1 = mainActivity1;
 	}
 }
